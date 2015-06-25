@@ -6,6 +6,8 @@ deku-remarkable
 
 [rm]: https://github.com/acdlite/react-remarkable
 
+### Usage
+
 ```
 npm i --save deku-remarkable
 ```
@@ -13,7 +15,7 @@ npm i --save deku-remarkable
 in JSX
 
 ```jsx
-Markdown $ deku.element.bind null $ require :deku-remarkable
+var Markdown = deku.element.bind(null, (require 'deku-remarkable'))
 var options = {
   breaks: true
 }
@@ -21,7 +23,7 @@ var options = {
 var Page = {
   render: function(component setState) {
     return <div class="layout-page">
-      <Markdown source={"test **Markdown**"} options={options}>
+      <Markdown source={"test **Markdown**"} options={options} />
     </div>
   }
 }
@@ -43,6 +45,13 @@ var Page $ deku.element.bind null $ {}
       Markdown null
         div null ":raw DOM"
 ```
+
+### Options
+
+* `source`: `string` Markdown string
+* `options`: `object`, [See Remarkable options][options]
+
+[options]: https://github.com/jonschlinkert/remarkable#options
 
 ### Usage
 
